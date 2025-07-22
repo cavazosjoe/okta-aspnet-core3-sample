@@ -22,14 +22,18 @@ Before running this sample, you will need an Okta Integrator Free Plan account. 
 7. In the **Controlled access** section, select the appropriate access level
 8. Click **Save**
 
-### Where are my new app's credentials?
-
 Creating an OIDC Web App manually in the Admin Console configures your Okta Org with the application settings. You may also need to configure trusted origins for `https://localhost:5001` and `http://localhost:8080` in **Security > API > Trusted Origins**.
 
-After creating the app, you can find the configuration details on the app’s **General** tab:
-- **Client ID:** Found in the **Client Credentials** section
-- **Client Secret:** Click **Show** in the **Client Credentials** section to reveal
-- **Okta Domain:** Found in the **Issuer URI** field for the authorization server that appears by selecting **Security > API** from the navigation pane.
+## Running This Example
+
+### Get the code
+
+```bash
+git clone https://github.com/okta-samples/okta-aspnet-core3-sample.git
+cd okta-aspnet-core3-sample
+```
+
+Update your config file at `okta-aspnetcore-mvc-example/appsettings.json` with the values from your application's configuration:
 
 ```text
 "OktaDomain": "https://dev-133337.okta.com",
@@ -37,9 +41,12 @@ After creating the app, you can find the configuration details on the app’s **
 "ClientSecret": "NEVER-SHOW-SECRETS"
 ```
 
-## Running This Example
+### Where are my new app's credentials?
 
-Grab and configure this project using `okta start aspnet-core3`
+After creating the app, you can find the configuration details on the app’s **General** tab:
+- **Client ID:** Found in the **Client Credentials** section
+- **Client Secret:** Click **Show** in the **Client Credentials** section to reveal
+- **Okta Domain:** Found in the **Issuer URI** field for the authorization server that appears by selecting **Security > API** from the navigation pane.
 
 ### Run the web application
 
